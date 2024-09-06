@@ -1,10 +1,11 @@
-import style from "./Button.module.css"
+import style from './Button.module.css'
 
-const Button = ({Label}) => {
+const Button = ({label})=> {
     return(
         <div>
-            <button className={style.ButtonContainer}>{Label}</button>
+            <button>{label}</button>
         </div>
     )
 }
-export default Button;
+
+export default Button

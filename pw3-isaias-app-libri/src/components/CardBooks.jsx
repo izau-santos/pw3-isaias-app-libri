@@ -1,17 +1,14 @@
-/* Importando o css para estilizar o cardbooks */
-import style from "./CardBooks.module.css"
-import Button from "./Button";
-
-const CardBooks = ({titulo, autor, foto}) =>{
-    return(
-        <div  className = {style.bookCard}>
-            <h3 className = {style.titulo}>{titulo} </h3>
-            <p className = {style.autor}>{autor} </p>
-            <img src = {foto} alt = " As Cavernas de Aço" title = " As Cavernas de Aço " />
+    const CardBooks  = ({titulo, autor})=> {
+        return(
             <div>
-            <Button Label = "DETALHE" />
+                <h3>{titulo}</h3>
+                    <p>{    autor}</p>
             </div>
-        </div>
-    )
-};      
-export default CardBooks;
+        )
+    }                                             
+
+
+
+
+
+    export default CardBooks

@@ -1,31 +1,32 @@
-/* Importa o CSS */
+
 import './App.css'
-/* Importa o componente de card de livro */
-import CardBooks from './components/CardBooks'
-/* Importa o arquivo de imagem de capa do livro */
-import CapaLivro from './assets/livros/cavernas_aco.jpg'
+import NavBar from './components/layout/NavBar'
+import Container from './components/layout/Container'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/pages/Home'  
+import CreateBooks from './components/pages/CreateBooks'
+import ListBooks from './components/pages/ListBooks'
+
+
 
 function App() {
 
   return (
     <>
-      <CardBooks
-        titulo = 'As Cavernas de aço'
-        autor = 'Isaac Asimov'
-        foto={CapaLivro}
-        />
+      <BrowserRouter>
+        <Container>
+          <Routes>
+            <Route path='/' element={<NavBar />}>
+              <Route path='/' element={<Home />} />
+              <Route path='/createBook' element={<CreateBooks />} />
+              <Route path='/listBook' element={<ListBooks />} />
+            </Route>
+          </Routes>
+        </Container>
+      </BrowserRouter>
 
-       <CardBooks
-        titulo = 'As maravilhas do mundo moderno'
-        autor = 'Pitagoras de gregorio'
-      
-      />
-       <CardBooks
-        titulo = 'As maravilhas do mundo antigo'
-        autor = 'Cleopatra de moisés'
-      
-      />
     </>
+
   )
 }
 
