@@ -1,10 +1,31 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import style from  "./CreateBooks.module.css";
 import Input from "../forms/Input";
 import Select from "../forms/Select";
 import Button from "../forms/Button";
 
 const CreateBooks = ()=>{
+
+    // Recupera os dados de categorias da apirest
+    useEffect(()=>{
+        fetch('http://localhost:5000/listagemCateorias', {
+            method:'GET', 
+            headers:{
+                'Content-Type':'application/json',
+                'Access-Control-Allow-Origin':'*',
+                'Access-Control-Allow_Headers':'*'
+            }
+        }).then(
+            (response)=>{
+                console.log('RESPOSTA', response)
+            }
+        ).catch(
+            (error)=>{
+                console.log(error)
+            }
+        )
+    }, []);
 
     return(
         <section className={style.create_books_container}>
@@ -43,4 +64,4 @@ const CreateBooks = ()=>{
     )
 }
 
-export default CreateBooks  
+export default CreateBooks; 
