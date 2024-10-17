@@ -20,6 +20,11 @@ const CreateBooks = () => {
         console.log(book)
     }
 
+    function handlerChangeCategory(event) {
+        setBook({ ...book,cod_categoria : event.target.value });
+        console.log(book)
+    }
+
     // Recupera os dados de categorias da apirest
     useEffect(() => {
         fetch('http://localhost:5000/listagemCateorias', {
@@ -86,7 +91,7 @@ const CreateBooks = () => {
     return (
         <section className={style.create_books_container}>
             <h1> Create Books</h1>
-            <form>submit={submit}</form>
+            <form onSubmit={submit}>
 
             <Input
                 type="text"
@@ -114,12 +119,14 @@ const CreateBooks = () => {
                 name="categoria"
                 text="Escolha uma categoria do livro"
                 options={categorias}
+                handlerChangeCategory={handlerChangeCategory}
+
             />
 
             <Button
                 rotulo="Cadastrar Livro"
             />
-
+    </form>
 
         </section>
     )
