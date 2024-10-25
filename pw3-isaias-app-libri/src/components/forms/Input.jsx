@@ -9,7 +9,7 @@ function Input ({type, text, name, placeHolder, handlerChangeBook}){
                 type={type}
                 name={name}
                 id={name}
-                placeHolder={placeHolder}
+                placeholder={placeHolder}
                 onChange={handlerChangeBook}
             />
         </div>

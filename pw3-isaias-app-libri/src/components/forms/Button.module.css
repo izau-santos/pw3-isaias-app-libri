@@ -14,3 +14,7 @@ button{
 button:hover{
     background-color: #16A026;
 }
+
+.buttoncontainer{
+    width: 100%;
+}
