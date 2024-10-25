@@ -10,4 +10,8 @@ const ContainerBook = (props) => {
     )
 }
 
+<<<<<<< HEAD
 export default ContainerBook
+=======
+export default ContainerBook;
+>>>>>>> c92315e2ddcbd8d86e5085445dd6afa323399582

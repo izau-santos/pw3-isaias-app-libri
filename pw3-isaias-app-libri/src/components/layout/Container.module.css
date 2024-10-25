@@ -1,4 +1,5 @@
 .container{
+<<<<<<< HEAD
     background-color: #fff;
     width:1200px;
     display:flex;
@@ -8,3 +9,13 @@
 }
 
 
+=======
+    width: 1200px;
+    background-color: #CCC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+>>>>>>> c92315e2ddcbd8d86e5085445dd6afa323399582
