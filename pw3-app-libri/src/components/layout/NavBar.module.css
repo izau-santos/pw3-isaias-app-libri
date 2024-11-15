@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #04042e;
+    padding: 1em;
+}
+.list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+.item{
+    margin-right: 1em;
+    color: white;
+    font-size: 30px;
+    font-family: system-ui, -apple-system;
+    transition: transform 0.5s ease;
+    font-weight: 800;
+}
+.item:hover{
+    filter: drop-shadow(0 0 3px #ffffff8f);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+}
